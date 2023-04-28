@@ -44,10 +44,10 @@ git clone https://github.com/nautobot/nautobot-docker-compose.git
 cd nautobot-docker-compose
 
 # Copy local.env.example to local.env
-#cp local.env.example local.env
+cp local.env.example local.env
 
 # Update the .env to be only available for the current user
-#chmod 0600 local.env
+chmod 0600 local.env
 
 # Run docker-compose up to start the environment
 #docker-compose up -d
