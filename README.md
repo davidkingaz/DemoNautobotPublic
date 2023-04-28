@@ -1,6 +1,6 @@
 # demonautopublic
 
-# DEMONSTRATE NAUTOBOT
+# DEMONSTRATE NAUTOBOT INSTALLATION
 
 # Ensure the script has execution permissions
 1-  Give the executable permissions with 
@@ -23,3 +23,6 @@
 
 7-
 
+
+# DEMONSTRATE NGINX INSTALLATION
+1- 
