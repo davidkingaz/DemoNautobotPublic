@@ -16,13 +16,16 @@
 4- Run the "   " script to set the configurations as desired for the demo
 
 # Run docker-compose up to start the environment
-5-  Run "docker-compose up -d"
-
-
-6-
-
-7-
+5-  Run "sudo docker compose up -d"
 
 
 # DEMONSTRATE NGINX INSTALLATION
-1- 
+# Ensure the script has execution permissions
+1-  Give the executable permissions with 
+         "chmod +x install_nginx.sh"
+
+# Get the Nautobot prerequisites install on the Linux host
+2-  Run it with "./install_nginx.sh"
+
+
+

@@ -32,4 +32,8 @@ sudo usermod -aG docker $(whoami)
 docker --version
 docker compose version
  
+echo "What is the Nautobot IP address"
+
+echo "What is the Nautobot Port"
+
 echo "Pre-requisites Completed"

@@ -48,14 +48,4 @@ cp local.env.example local.env
 # Update the .env to be only available for the current user
 chmod 0600 local.env
 
-# Check if .gitignore file exists
-if [ ! -f .gitignore ]; then
-    # Create a .gitignore file if it does not exist
-    touch .gitignore
-fi
-
-# Check if 'local.env' is already in .gitignore
-if ! grep -q "local.env" .gitignore; then
-    # Add 'local.env' to .gitignore
-    echo "local.env" >> .gitignore
-fi
+echo "Make sure you enable NAUTOBOT_CREATE_SUPERUSER as "True" and update the NAUTOBOTSUPERUSERPASSWORD in the local.env file"
