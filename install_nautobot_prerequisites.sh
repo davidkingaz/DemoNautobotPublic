@@ -17,8 +17,7 @@ sudo apt-get install -y docker-ce
 echo "Docker installed successfully."
 
 # Install Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /bin/docker-compose
+sudo apt-get install docker-compose-plugin
 
 echo "Docker Compose installed successfully."
 
@@ -31,8 +30,8 @@ sudo usermod -aG docker $(whoami)
 
 # Print Docker version to verify installation
 docker --version
-docker-compose --version
-
+docker compose version
+ 
 echo "Pre-requisites Completed. Press ENTER to continue..."
 read
 
@@ -48,9 +47,6 @@ cp local.env.example local.env
 
 # Update the .env to be only available for the current user
 chmod 0600 local.env
-
-# Run docker-compose up to start the environment
-#docker-compose up -d
 
 # Check if .gitignore file exists
 if [ ! -f .gitignore ]; then
