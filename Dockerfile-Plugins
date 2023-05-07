@@ -1,0 +1,16 @@
+ARG PYTHON_VER
+
+ARG NAUTOBOT_VERSION=1.5.9
+FROM networktocode/nautobot:${NAUTOBOT_VERSION}-py${PYTHON_VER}
+RUN pip install --upgrade pip wheel
+
+COPY ./plugin_requirements.txt /opt/nautobot/
+RUN pip install --no-warn-script-location -r /opt/nautobot/plugin_requirements.txt
+
+# Clone the ciscodnacnautobot repository
+RUN git clone https://github.com/joakimnyden/ciscodnacnautobot.git /opt/nautobot/ciscodnacnautobot
+
+# Install the ciscodnacnautobot plugin
+RUN pip3 install -e /opt/nautobot/ciscodnacnautobot
+
+COPY config/nautobot_config.py /opt/nautobot/nautobot_config.py
